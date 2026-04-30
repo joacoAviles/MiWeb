@@ -1,38 +1,38 @@
-const menuButton = document.querySelector('.menu-button');
+const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 
-if (menuButton && nav) {
-  menuButton.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(open));
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
   nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
 
-const filters = document.querySelectorAll('.filter');
-const cards = document.querySelectorAll('.project-card');
+const filterButtons = document.querySelectorAll('.filter');
+const projectCards = document.querySelectorAll('.project-card');
 
-filters.forEach((button) => {
+filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const selected = button.dataset.filter;
 
-    filters.forEach((item) => item.classList.remove('is-active'));
+    filterButtons.forEach((b) => b.classList.remove('is-active'));
     button.classList.add('is-active');
 
-    cards.forEach((card) => {
-      const visible = selected === 'all' || card.dataset.category === selected;
-      card.style.display = visible ? 'flex' : 'none';
+    projectCards.forEach((card) => {
+      const match = selected === 'all' || card.dataset.category === selected;
+      card.style.display = match ? 'flex' : 'none';
     });
   });
 });
 
-const year = document.getElementById('year');
-if (year) {
-  year.textContent = String(new Date().getFullYear());
+const yearElement = document.getElementById('current-year');
+if (yearElement) {
+  yearElement.textContent = String(new Date().getFullYear());
 }

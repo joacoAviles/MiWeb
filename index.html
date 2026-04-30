@@ -71,7 +71,8 @@
         <div class="row justify-content-center">
           <div class="col-lg-9">
             <h2>Joaquín Avilés</h2>
-            <p>Yo soy <span class="typed" data-typed-items="analista,innovador, creador de contenido">emprendedor</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <p class="hero-subtitle">Construyo proyectos digitales con enfoque en resultados reales.</p>
+            <p>Yo soy <span class="typed" data-typed-items="automatizador de procesos,analista de datos,creador de soluciones digitales">emprendedor</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
               <a href="https://www.youtube.com/@JoacoAvia-Acelerados"><i class="bi bi-youtube"></i></a>
               <a href="https://web.facebook.com/JoacoAvia/about/"><i class="bi bi-facebook"></i></a>
@@ -80,6 +81,10 @@
               <a href="https://www.linkedin.com/in/joaquinavilesse/"><i class="bi bi-linkedin"></i></a>
               <a href="https://github.com/joacoAviles"><i class="bi bi-github"></i></a>
             </div>
+            <div class="hero-cta d-flex gap-3 mt-4">
+              <a href="#portfolio" class="btn btn-warning">Ver proyectos</a>
+              <a href="#contact" class="btn btn-outline-light">Hablemos</a>
+            </div>
           </div>
         </div>
       </div>
@@ -87,80 +92,95 @@
     </section><!-- /Hero Section -->
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <section id="portfolio" class="portfolio section dark-background">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Proyectos</h2>
-        <p>Aquí encontrarás una selección de mis proyectos: desde automatizaciones y análisis de datos hasta iniciativas personales y creación de contenido. Todo lo que refleja mi forma de emprender y construir soluciones.</p>
-      </div><!-- End Section Title -->
+        <h2>Proyectos que generan resultados</h2>
+        <p>6 proyectos destacados en automatización, datos, contenido y construcción personal. Filtra por categoría o explóralos en carrusel.</p>
+      </div>
 
       <div class="container">
+        <ul class="portfolio-filters custom-filters" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="all" class="filter-active">Todos</li>
+          <li data-filter="automatizacion">Automatización</li>
+          <li data-filter="datos">Datos</li>
+          <li data-filter="personales">Personales</li>
+          <li data-filter="contenido">Contenido</li>
+        </ul>
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <!-- Filtros -->
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Todos</li>
-            <li data-filter=".filter-automatizacion">Automatización</li>
-            <li data-filter=".filter-datos">Análisis de Datos</li>
-            <li data-filter=".filter-proyectos">Proyectos Personales</li>
-            <li data-filter=".filter-contenido">Contenido</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <!-- Items -->
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <!-- Item: Automatización -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automatizacion">
-              <a href="/proyectos/automatizacion/herramientas-excel/index.html" class="d-block">
-                <img src="assets/img/portfolio/proyectosexcel.png" class="img-fluid" alt="Herramientas Excel">
-              </a>
-              <div class="portfolio-info">
-                <h4>Herramientas Excel</h4>
-                <p>Scripts para automatizar tareas tediosas de Excel como separar hojas o consolidar datos.</p>
-              </div>
-            </div><!-- End Item -->
-
-
-
-            <!-- Item: Datos -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-datos">
-              <img src="assets/img/portfolio/analisis-de-datos.png" class="img-fluid" alt="Análisis de Autos">
-              <div class="portfolio-info">
-                <h4>Análisis de datos</h4>
-                <p>Próximamente</p>
-                <a href="assets/img/portfolio/analisis-de-datos.png" data-gallery="portfolio-gallery-datos" class="glightbox preview-link" title="Análisis Autos"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-detalles-datos.html" class="details-link" title="Más detalles"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Item -->
-
-            <!-- Item: Proyectos Personales -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-proyectos">
-              <img src="assets/img/portfolio/proyectos.png" class="img-fluid" alt="Suzuki Vitara 98">
-              <div class="portfolio-info">
-                <h4>Proyectos</h4>
-                <p>Próximamente</p>
-                <a href="assets/img/portfolio/proyectos.png" data-gallery="portfolio-gallery-proyectos" class="glightbox preview-link" title="Vitara 98"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-vitara.html" class="details-link" title="Más detalles"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Item -->
-
-            <!-- Item: Contenido -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-contenido">
-              <img src="assets/img/portfolio/contenido.png" class="img-fluid" alt="Canal Acelerados">
-              <div class="portfolio-info">
-                <h4>Canal Acelerados</h4>
-                <p>Próximamente</p>
-                <a href="assets/img/portfolio/contenido.png" data-gallery="portfolio-gallery-contenido" class="glightbox preview-link" title="Canal Acelerados"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://www.youtube.com/@JoacoAvia-Acelerados" target="_blank" class="details-link" title="Ver Canal"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Item -->
-
-          </div><!-- End Portfolio Container -->
-
+        <div class="swiper project-swiper" data-aos="fade-up" data-aos-delay="200">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-category="automatizacion">
+              <article class="project-card">
+                <img src="assets/img/portfolio/proyectosexcel.png" alt="Herramientas Excel">
+                <div class="project-card-content">
+                  <span class="project-tag">Automatización</span>
+                  <h4>Herramientas Excel</h4>
+                  <p>Scripts para separar hojas y consolidar reportes en segundos.</p>
+                  <a href="/proyectos/automatizacion/herramientas-excel/index.html">Ver caso <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide" data-category="automatizacion">
+              <article class="project-card">
+                <img src="assets/img/services.jpg" alt="Automatización de flujos">
+                <div class="project-card-content">
+                  <span class="project-tag">Automatización</span>
+                  <h4>Automatización de flujos</h4>
+                  <p>Diseño de procesos repetitivos para ahorrar horas semanales.</p>
+                  <a href="/proyectos/automatizacion/index.html">Ver caso <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide" data-category="datos">
+              <article class="project-card">
+                <img src="assets/img/portfolio/analisis-de-datos.png" alt="Analítica de negocio">
+                <div class="project-card-content">
+                  <span class="project-tag">Datos</span>
+                  <h4>Analítica de negocio</h4>
+                  <p>Visualización y lectura de métricas clave para decisiones rápidas.</p>
+                  <a href="/proyectos/datos/index.html">Ver caso <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide" data-category="datos">
+              <article class="project-card">
+                <img src="assets/img/portfolio/product-1.jpg" alt="Dashboard KPI">
+                <div class="project-card-content">
+                  <span class="project-tag">Datos</span>
+                  <h4>Dashboard KPI</h4>
+                  <p>Reportes con seguimiento de objetivos y tendencias accionables.</p>
+                  <a href="/proyectos/datos/index.html">Ver caso <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide" data-category="personales">
+              <article class="project-card">
+                <img src="assets/img/portfolio/proyectos.png" alt="Proyectos personales">
+                <div class="project-card-content">
+                  <span class="project-tag">Personales</span>
+                  <h4>Builds personales</h4>
+                  <p>Proyectos DIY donde combino mecánica, diseño y ejecución.</p>
+                  <a href="/proyectos/personales/index.html">Ver caso <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide" data-category="contenido">
+              <article class="project-card">
+                <img src="assets/img/portfolio/contenido.png" alt="Canal de contenido">
+                <div class="project-card-content">
+                  <span class="project-tag">Contenido</span>
+                  <h4>Canal Acelerados</h4>
+                  <p>Contenido automotriz con narrativa visual y enfoque técnico.</p>
+                  <a href="https://www.youtube.com/@JoacoAvia-Acelerados" target="_blank">Ver canal <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
         </div>
-
       </div>
 
     </section><!-- /Portfolio Section -->

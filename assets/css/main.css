@@ -1501,28 +1501,3 @@ section,
 .project-swiper .swiper-button-next, .project-swiper .swiper-button-prev { color: #f4c400; }
 .project-swiper .swiper-pagination-bullet { background: #6f6f6f; opacity: 1; }
 .project-swiper .swiper-pagination-bullet-active { background: #f4c400; }
-
-/* Sidebar menu yellow refinement */
-.header {
-  background: linear-gradient(180deg, #171100 0%, #0d0d0d 100%);
-  border-right: 1px solid rgba(244, 196, 0, 0.35);
-}
-.navmenu a,
-.navmenu a:focus {
-  color: #ffd84d;
-}
-.navmenu a i {
-  background-color: rgba(244, 196, 0, 0.15);
-  color: #ffd84d;
-}
-.navmenu a:hover,
-.navmenu .active,
-.navmenu .active:focus {
-  color: #111;
-}
-.navmenu a:hover i,
-.navmenu .active i,
-.navmenu .active:focus i {
-  background-color: #f4c400;
-  color: #111;
-}

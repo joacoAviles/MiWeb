@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MiWeb | Tecnología con impacto comunitario</title>
+    <title>MiWeb | Portfolio profesional</title>
     <meta
       name="description"
-      content="Sitio personal con proyectos tecnológicos orientados al beneficio comunitario."
+      content="Portfolio personal y profesional con proyectos de desarrollo web y soluciones digitales."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,46 +19,51 @@
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <header class="site-header" id="inicio">
-      <div class="container nav-shell">
-        <a class="brand" href="#inicio">MiWeb</a>
+    <header class="header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Ir al inicio">MiWeb</a>
 
-        <button class="menu-button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú">
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Abrir menú"
+        >
           <span></span><span></span><span></span>
         </button>
 
-        <nav id="nav" class="nav" aria-label="Principal">
+        <nav id="primary-nav" class="nav" aria-label="Navegación principal">
           <a href="#sobre-mi">Sobre mí</a>
           <a href="#proyectos">Proyectos</a>
           <a href="#contacto">Contacto</a>
-          <a class="btn btn-primary" href="mailto:contacto@miweb.dev">Escríbeme</a>
+          <a class="btn btn-primary" href="mailto:contacto@miweb.dev">Hablemos</a>
         </nav>
       </div>
     </header>
 
     <main id="contenido">
-      <section class="section hero">
+      <section class="hero section">
         <div class="container hero-grid">
-          <div>
-            <p class="hero-kicker">Tecnología humana · Código útil · Comunidad</p>
-            <h1>Desarrollo proyectos digitales claros, modernos y con valor real para las personas.</h1>
-            <p class="hero-text">
-              Este espacio reúne trabajo técnico y colaborativo: herramientas, plataformas y recursos
-              diseñados para resolver problemas concretos en comunidades y organizaciones.
+          <div class="hero-copy">
+            <p class="eyebrow">Desarrollo web y producto digital</p>
+            <h1>Construyo experiencias web claras, rápidas y con enfoque de negocio.</h1>
+            <p class="lead">
+              Soy desarrollador full stack y transformo ideas en productos digitales mantenibles,
+              escalables y con una interfaz pensada para usuarios reales.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
-              <a class="btn btn-secondary" href="#contacto">Contactar</a>
+              <a class="btn btn-secondary" href="#contacto">Contacto</a>
             </div>
           </div>
-          <div class="hero-card" aria-label="Áreas de enfoque">
-            <h2>Enfoque</h2>
+          <aside class="hero-panel" aria-label="Resumen profesional">
+            <h2>Enfoque de trabajo</h2>
             <ul>
-              <li>Interfaces comprensibles y accesibles.</li>
-              <li>Arquitectura mantenible y rendimiento estable.</li>
-              <li>Productos tecnológicos con impacto social.</li>
+              <li>Arquitectura limpia y evolución sostenible.</li>
+              <li>Diseño UI orientado a conversión y legibilidad.</li>
+              <li>Automatización, performance y calidad en producción.</li>
             </ul>
-          </div>
+          </aside>
         </div>
       </section>
 
@@ -66,9 +71,10 @@
         <div class="container">
           <h2>Sobre mí</h2>
           <p>
-            Soy desarrollador web y trabajo en la intersección entre diseño, experiencia de uso y
-            construcción técnica. Me interesa crear productos que la gente pueda entender rápido,
-            usar con confianza y mantener en el tiempo.
+            Me especializo en crear soluciones web modernas para profesionales y equipos que
+            necesitan una presencia digital sólida. Combino criterio visual, arquitectura técnica y
+            foco en resultados para que cada proyecto no solo se vea bien, sino que funcione con
+            precisión.
           </p>
         </div>
       </section>
@@ -76,72 +82,72 @@
       <section id="proyectos" class="section">
         <div class="container">
           <div class="section-head">
-            <h2>Proyectos para la comunidad</h2>
-            <p>Cada proyecto explica objetivo, aporte y tecnologías para que sea fácil de evaluar.</p>
+            <h2>Proyectos destacados</h2>
+            <p>Una selección de trabajos con contexto técnico, impacto y enfoque de producto.</p>
           </div>
 
-          <div class="filters" role="group" aria-label="Filtrar proyectos">
+          <div class="project-filters" role="group" aria-label="Filtrar proyectos">
             <button class="filter is-active" data-filter="all">Todos</button>
-            <button class="filter" data-filter="educacion">Educación</button>
-            <button class="filter" data-filter="salud">Salud</button>
-            <button class="filter" data-filter="participacion">Participación</button>
+            <button class="filter" data-filter="frontend">Frontend</button>
+            <button class="filter" data-filter="backend">Backend</button>
+            <button class="filter" data-filter="fullstack">Full Stack</button>
           </div>
 
           <div class="projects-grid">
-            <article class="project-card" data-category="educacion">
-              <p class="project-top">Educación</p>
-              <h3>Biblioteca digital de barrio</h3>
-              <p class="project-summary">
-                Portal para compartir materiales educativos abiertos y coordinar préstamos entre
-                vecinas, vecinos y centros culturales.
+            <article class="project-card" data-category="fullstack">
+              <p class="project-category">Full Stack</p>
+              <h3>Plataforma de reservas para servicios premium</h3>
+              <p>
+                Rediseño y desarrollo de una plataforma de reservas con pagos integrados y
+                confirmación automática. Se redujo la fricción de compra y mejoró la tasa de cierre.
               </p>
-              <div class="project-tags">
+              <div class="project-meta">
                 <span class="tag">React</span>
-                <span class="tag">Node</span>
-                <span class="tag">Accesibilidad</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Stripe</span>
               </div>
-              <p class="project-role"><strong>Aporte:</strong> Diseño UX, frontend y flujo de registro comunitario.</p>
+              <p class="project-role"><strong>Rol:</strong> UX técnico, arquitectura y desarrollo end-to-end.</p>
               <div class="project-actions">
-                <a class="btn btn-ghost" href="#contacto">Conocer más</a>
-                <a class="btn btn-text" href="https://github.com" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                <a class="btn btn-ghost" href="#contacto">Solicitar caso</a>
+                <a class="btn btn-text" href="https://github.com" target="_blank" rel="noopener noreferrer">Repo</a>
               </div>
             </article>
 
-            <article class="project-card" data-category="salud">
-              <p class="project-top">Salud</p>
-              <h3>Agenda de atención local</h3>
-              <p class="project-summary">
-                Sistema para organizar turnos en centros de atención primaria con recordatorios simples
-                por correo y panel de seguimiento.
+            <article class="project-card" data-category="frontend">
+              <p class="project-category">Frontend</p>
+              <h3>Dashboard analítico para equipos comerciales</h3>
+              <p>
+                Implementación de interfaz de datos con métricas en tiempo real, jerarquía clara y
+                componentes reutilizables para acelerar entregas de nuevas vistas.
               </p>
-              <div class="project-tags">
+              <div class="project-meta">
                 <span class="tag">TypeScript</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">APIs</span>
+                <span class="tag">Charts</span>
+                <span class="tag">Design System</span>
               </div>
-              <p class="project-role"><strong>Aporte:</strong> Arquitectura backend e integración de notificaciones.</p>
+              <p class="project-role"><strong>Rol:</strong> Lideré UI architecture y performance de render.</p>
               <div class="project-actions">
-                <a class="btn btn-ghost" href="#contacto">Ver caso</a>
-                <a class="btn btn-text" href="https://github.com" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                <a class="btn btn-ghost" href="#contacto">Ver demo</a>
+                <a class="btn btn-text" href="https://github.com" target="_blank" rel="noopener noreferrer">Repo</a>
               </div>
             </article>
 
-            <article class="project-card" data-category="participacion">
-              <p class="project-top">Participación</p>
-              <h3>Mapa de iniciativas ciudadanas</h3>
-              <p class="project-summary">
-                Plataforma colaborativa para visibilizar iniciativas territoriales y conectar personas
-                interesadas en participar.
+            <article class="project-card" data-category="backend">
+              <p class="project-category">Backend</p>
+              <h3>API transaccional para e-commerce multi-canal</h3>
+              <p>
+                Diseño de servicios para catálogo, inventario y órdenes con trazabilidad completa.
+                Se mejoró estabilidad operativa y observabilidad en ambientes productivos.
               </p>
-              <div class="project-tags">
-                <span class="tag">Mapas</span>
-                <span class="tag">Open Data</span>
-                <span class="tag">UI</span>
+              <div class="project-meta">
+                <span class="tag">REST</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
               </div>
-              <p class="project-role"><strong>Aporte:</strong> Diseño de interacción y componentes reutilizables.</p>
+              <p class="project-role"><strong>Rol:</strong> Diseño de dominio, APIs y pipeline de despliegue.</p>
               <div class="project-actions">
-                <a class="btn btn-ghost" href="#contacto">Solicitar demo</a>
-                <a class="btn btn-text" href="https://github.com" target="_blank" rel="noopener noreferrer">Repositorio</a>
+                <a class="btn btn-ghost" href="#contacto">Más detalles</a>
+                <a class="btn btn-text" href="https://github.com" target="_blank" rel="noopener noreferrer">Repo</a>
               </div>
             </article>
           </div>
@@ -153,9 +159,10 @@
           <div>
             <h2>Contacto</h2>
             <p>
-              Si quieres colaborar en proyectos tecnológicos con enfoque comunitario, escríbeme.
+              Si buscas construir o mejorar un producto digital, conversemos. Respondo propuestas,
+              colaboraciones y consultoría técnica.
             </p>
-            <ul class="contact-list">
+            <ul class="contact-links">
               <li><a href="mailto:contacto@miweb.dev">contacto@miweb.dev</a></li>
               <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
@@ -168,26 +175,26 @@
               <input type="text" name="nombre" required />
             </label>
             <label>
-              Correo
+              Email
               <input type="email" name="email" required />
             </label>
             <label>
               Mensaje
               <textarea name="mensaje" rows="4" required></textarea>
             </label>
-            <div class="captcha-slot" aria-label="Captcha">
+            <div class="captcha-placeholder" aria-label="Captcha">
               <span>Captcha activo</span>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button class="btn btn-primary" type="submit">Enviar mensaje</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-shell">
-        <p>© <span id="year"></span> MiWeb</p>
-        <a href="#inicio">Volver arriba</a>
+    <footer class="footer">
+      <div class="container footer-wrap">
+        <p>© <span id="current-year"></span> MiWeb. Desarrollo web profesional.</p>
+        <a href="#top">Volver arriba</a>
       </div>
     </footer>
 

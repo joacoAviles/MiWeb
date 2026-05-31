@@ -268,3 +268,69 @@ window.addEventListener('load', function () {
 
   applyFilter('all');
 });
+
+/**
+ * Contact form API bridge for joaquin.aviles.cl
+ */
+(function () {
+  const API_URL = window.AVIA_FORMS_API_URL || 'https://api.aviarockets.cl/api/forms/submit';
+  const personalForm = document.querySelector('form[action^="https://formsubmit.co/"]');
+  if (!personalForm) return;
+
+  function setStatus(message, isError) {
+    let status = personalForm.querySelector('.form-status');
+    if (!status) {
+      status = document.createElement('p');
+      status.className = 'form-status mt-3';
+      status.setAttribute('aria-live', 'polite');
+      personalForm.appendChild(status);
+    }
+    status.textContent = message;
+    status.style.color = isError ? '#dc3545' : '#198754';
+  }
+
+  personalForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const button = personalForm.querySelector('button[type="submit"]');
+    const originalText = button ? button.textContent : '';
+    const formData = new FormData(personalForm);
+    const payload = Object.fromEntries(formData.entries());
+
+    payload.form = 'joaquin_contact';
+    delete payload._captcha;
+    delete payload._next;
+
+    const successUrl = formData.get('_next') || 'https://joaquin.aviles.cl/gracias.html';
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = 'Enviando...';
+    }
+
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.ok === false) {
+        throw new Error(result.detail || result.message || 'No se pudo enviar el formulario');
+      }
+
+      window.location.href = successUrl;
+    } catch (error) {
+      setStatus(error.message || 'No se pudo enviar el formulario. Intenta nuevamente.', true);
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+    }
+  });
+})();

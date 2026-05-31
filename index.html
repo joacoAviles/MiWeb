@@ -8,17 +8,12 @@
   <meta name="description" content="Portafolio de Joaquín Avilés: emprendedor chileno, fundador de Avia Rockets y Apex Imports. Proyectos en análisis de datos, automatización, SaaS y automovilismo. Apasionado por los autos modificados, motos, surf, fotografía y el espíritu DIY.">
   <meta name="keywords" content="Joaquín Avilés, emprendedor Chile, Apex Imports, Avia Rockets, Rennsport, Sparco Chile, Sigg, automovilismo, autos modificados, repuestos de competición, seguridad automotriz, motos, surf, fotografía, libros, proyectos DIY, arreglar cosas, instalaciones, innovación, análisis de datos, automatización, SaaS, Python, APIs, proyectos digitales">
 
-
-    <!-- 👉 Aquí puedes agregar las etiquetas Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Joaquín Avilés | Emprendedor y Creador de Proyectos Digitales">
   <meta property="og:description" content="Portafolio de proyectos en datos, automatización, domótica y contenido digital.">
   <meta property="og:image" content="https://tusitio.com/assets/img/hero-bg.jpg">
   <meta property="og:url" content="https://tusitio.com">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -34,7 +29,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="index-page">
@@ -46,14 +40,7 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <!--
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        -->
         <li><a href="#portfolio"><i class="bi bi-kanban-fill"></i><span>Proyectos</span></a></li>
-        <!--
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        -->
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Hablemos</span></a></li>
       </ul>
     </nav>
@@ -185,19 +172,15 @@
 
     </section><!-- /Portfolio Section -->
 
-
-
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contacto</h2>
         <p>Ya sea que busques resolver un problema o impulsar una solución, puedo ayudarte a dar el siguiente paso. Hablemos.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade" data-aos-delay="100">
-
         <div class="row gy-4">
 
           <div class="col-lg-4">
@@ -207,35 +190,31 @@
                 <h3>Dirección</h3>
                 <p>Santiago, Chile</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-rocket-takeoff"></i>
               <div>
-              <h3>Disponibilidad</h3>
-              <p>Abierto a nuevas colaboraciones y proyectos</p>
+                <h3>Disponibilidad</h3>
+                <p>Abierto a nuevas colaboraciones y proyectos</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-envelope-at"></i>
               <div>
-              <h3>Contacto</h3>
-              <p>Envíame un mensaje usando el formulario</p>
+                <h3>Contacto</h3>
+                <p>Envíame un mensaje usando el formulario</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
           </div>
 
           <div class="col-lg-8">
-            <!-- Formulario con FormSubmit -->
-            <form action="https://formsubmit.co/joaquin@aviles.cl" method="POST" data-aos="fade-up" data-aos-delay="200">
-              
-              <!-- Configuración oculta -->
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="https://joaquin.aviles.cl/gracias.html">
+            <form data-api-form data-success-url="https://joaquin.aviles.cl/gracias.html" data-aos="fade-up" data-aos-delay="200">
+              <input type="hidden" name="form" value="joaquin_contact">
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
 
               <div class="row gy-4">
-
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Tu Nombre" required>
                 </div>
@@ -263,31 +242,16 @@
                   <textarea name="message" class="form-control" rows="6" placeholder="Mensaje" required></textarea>
                 </div>
 
-                <!-- reCAPTCHA -->
-                <div class="col-md-12">
-                  <div class="g-recaptcha" data-sitekey="6Lf2y80rAAAAAGOHm_dBukvltjHd00dIng04DMPP"></div>
-                </div>
-
                 <div class="col-md-12 text-center">
-                  <button type="submit">Enviar</button>
+                  <button type="submit" class="btn btn-warning">Enviar</button>
                 </div>
-
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
+          </div>
         </div>
-
       </div>
 
     </section><!-- /Contact Section -->
-
-
-
-    <!-- Script de reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
   </main>
 
   <footer id="footer" class="footer position-relative dark-continuum">
@@ -295,12 +259,13 @@
       <h3 class="sitename">Joaquín Avilés</h3>
       <p>Apasionado por emprender, innovar y construir proyectos que combinan datos, automatización y creatividad.</p>
       <div class="social-links d-flex justify-content-center">
-      <a href="https://www.youtube.com/@JoacoAvia-Acelerados"><i class="bi bi-youtube"></i></a>          <a href="https://web.facebook.com/JoacoAvia/about/"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/joacoavia/"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.tiktok.com/@joacoavia"><i class="bi bi-tiktok"></i></a>
-      <a href="https://www.linkedin.com/in/joaquinavilesse/"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/joacoAviles"><i class="bi bi-github"></i></a>
-    </div>
+        <a href="https://www.youtube.com/@JoacoAvia-Acelerados"><i class="bi bi-youtube"></i></a>
+        <a href="https://web.facebook.com/JoacoAvia/about/"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/joacoavia/"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@joacoavia"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.linkedin.com/in/joaquinavilesse/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/joacoAviles"><i class="bi bi-github"></i></a>
+      </div>
       <div class="container">
         <div class="copyright">
           <span>Copyright</span> <strong class="px-1 sitename">Avia Rockets SpA</strong> <span>Todos los derechos reservados</span>
@@ -309,10 +274,7 @@
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
@@ -327,6 +289,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
+  <script src="forms-api.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>

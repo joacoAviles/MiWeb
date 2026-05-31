@@ -268,3 +268,76 @@ window.addEventListener('load', function () {
 
   applyFilter('all');
 });
+
+/**
+ * Ajustes mínimos del formulario personal.
+ */
+(function () {
+  const API_URL = window.AVIA_FORMS_API_URL || 'https://api.aviarockets.cl/api/forms/submit';
+  const form = document.querySelector('form[action^="https://formsubmit.co/"]');
+  if (!form) return;
+
+  document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]').forEach((link) => link.remove());
+
+  const submitButton = form.querySelector('button[type="submit"]');
+  if (submitButton) {
+    submitButton.classList.add('btn', 'btn-warning');
+  }
+
+  function setStatus(message, isError) {
+    let status = form.querySelector('.form-status');
+    if (!status) {
+      status = document.createElement('p');
+      status.className = 'form-status mt-3';
+      status.setAttribute('aria-live', 'polite');
+      form.appendChild(status);
+    }
+    status.textContent = message;
+    status.style.color = isError ? '#dc3545' : '#198754';
+  }
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const button = form.querySelector('button[type="submit"]');
+    const originalText = button ? button.textContent : '';
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+    const successUrl = formData.get('_next') || 'https://joaquin.aviles.cl/gracias.html';
+
+    payload.form = 'joaquin_contact';
+    delete payload._captcha;
+    delete payload._next;
+    delete payload['g-recaptcha-response'];
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = 'Enviando...';
+    }
+
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.ok === false) {
+        throw new Error(result.detail || result.message || 'No se pudo enviar el formulario');
+      }
+
+      window.location.href = successUrl;
+    } catch (error) {
+      setStatus(error.message || 'No se pudo enviar el formulario. Intenta nuevamente.', true);
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+    }
+  });
+})();
